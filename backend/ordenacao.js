@@ -60,4 +60,36 @@ function intercalar(esquerda, direita, contador) {
   return resultado;
 }
 
-module.exports = { mergeSort };
+// ---------------------------------------------------------------------------
+// INSERTION SORT
+// Usado quando o usuário curte um post. O feed já estava ordenado e só
+// algumas notas mudaram, então a lista fica QUASE ordenada. Nesse caso o
+// Insertion Sort é muito rápido (perto de O(n)), mesmo sendo O(n²) no pior caso.
+// ---------------------------------------------------------------------------
+function insertionSort(lista) {
+  const copia = lista.slice(); // não altera a lista original
+  let comparacoes = 0;
+
+  for (let i = 1; i < copia.length; i++) {
+    const atual = copia[i];
+    let j = i - 1;
+
+    // Empurra para a direita os posts com nota MENOR que a do atual
+    while (j >= 0) {
+      comparacoes++;
+      if (copia[j].nota < atual.nota) {
+        copia[j + 1] = copia[j];
+        j--;
+      } else {
+        break;
+      }
+    }
+
+    // Coloca o post atual na posição certa
+    copia[j + 1] = atual;
+  }
+
+  return { lista: copia, comparacoes };
+}
+
+module.exports = { mergeSort, insertionSort };
