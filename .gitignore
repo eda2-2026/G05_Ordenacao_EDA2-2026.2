@@ -1,0 +1,15 @@
+# Dependências (são baixadas com "npm install")
+node_modules/
+
+# Logs
+*.log
+npm-debug.log*
+
+# Arquivos do sistema e de editores
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+# Variáveis de ambiente
+.env

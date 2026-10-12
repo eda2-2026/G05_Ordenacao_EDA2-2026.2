@@ -1,0 +1,13 @@
+{
+  "name": "por-que-isso-apareceu",
+  "version": "1.0.0",
+  "description": "Simulador de feed de rede social que mostra como Merge Sort e Insertion Sort montam o que você vê",
+  "main": "backend/servidor.js",
+  "scripts": {
+    "start": "node backend/servidor.js",
+    "test": "node --test tests/ordenacao.test.js tests/score.test.js"
+  },
+  "dependencies": {
+    "express": "^4.21.2"
+  }
+}
