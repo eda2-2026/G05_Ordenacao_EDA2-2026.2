@@ -120,7 +120,7 @@ tests/
 
 ## Vídeo de apresentação
 
-- Link: (adicionar)
+- Link Video: [TRABALHO 02](https://youtu.be/7Qlauyfglfc)
 - Slides: [Abrir os slides (PDF)](docs/apresentacao.pdf)
 
 
