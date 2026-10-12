@@ -1,0 +1,226 @@
+
+:root {
+  --fundo: #E9ECF5;
+  --superficie: #FFFFFF;
+  --tinta: #1A1D3A;
+  --tinta-suave: #5A5F7D;
+  --linha: #D3D7E6;
+  --destaque: #4F3FD1;
+  --sobe: #1F8A5B;
+  --fonte: "Bricolage Grotesque", system-ui, -apple-system, "Segoe UI", sans-serif;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  background: var(--fundo);
+  color: var(--tinta);
+  font-family: var(--fonte);
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+button { font: inherit; cursor: pointer; }
+button:focus-visible { outline: 3px solid var(--destaque); outline-offset: 2px; }
+
+/* ---------- Cabeçalho ---------- */
+.cabecalho {
+  max-width: 940px;
+  margin: 0 auto;
+  padding: 3rem 1.25rem 2rem;
+}
+.cabecalho h1 {
+  margin: 0;
+  font-size: clamp(2.2rem, 6vw, 3.6rem);
+  font-weight: 800;
+  line-height: 1.02;
+  letter-spacing: -0.03em;
+  max-width: 14ch;
+}
+.cabecalho p {
+  margin: 1rem 0 0;
+  color: var(--tinta-suave);
+  max-width: 52ch;
+}
+
+/* ---------- Layout ---------- */
+.layout {
+  max-width: 940px;
+  margin: 0 auto;
+  padding: 0 1.25rem 4rem;
+  display: grid;
+  grid-template-columns: 260px 1fr;
+  gap: 2rem;
+  align-items: start;
+}
+
+.painel {
+  position: sticky;
+  top: 1.25rem;
+  display: grid;
+  gap: 1.75rem;
+}
+.painel h2 {
+  margin: 0 0 0.75rem;
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+/* ---------- Interesses ---------- */
+.chips { display: flex; flex-wrap: wrap; gap: 0.5rem; }
+.chip {
+  border: 1.5px solid var(--linha);
+  background: var(--superficie);
+  color: var(--tinta);
+  border-radius: 999px;
+  padding: 0.35rem 0.85rem;
+}
+.chip[aria-pressed="true"] {
+  background: var(--cor);
+  border-color: var(--cor);
+  color: #fff;
+}
+
+/* ---------- Status da ordenação ---------- */
+.status-caixa {
+  border-left: 4px solid var(--destaque);
+  padding-left: 1rem;
+}
+.status-algoritmo {
+  margin: 0;
+  font-size: 1.6rem;
+  font-weight: 800;
+  color: var(--destaque);
+  line-height: 1.1;
+}
+.status-numero { margin: 0.4rem 0 0; }
+.status-motivo {
+  margin: 0.5rem 0 0;
+  font-size: 0.9rem;
+  color: var(--tinta-suave);
+}
+
+/* ---------- Feed ---------- */
+.feed { display: grid; gap: 0.75rem; }
+
+.post {
+  display: grid;
+  grid-template-columns: 3rem 1fr;
+  background: var(--superficie);
+  border-radius: 14px;
+  overflow: hidden;
+}
+.post-posicao {
+  background: var(--cor);
+  color: #fff;
+  font-size: 1.4rem;
+  font-weight: 800;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  padding-top: 1rem;
+}
+.post-corpo { padding: 1rem 1.25rem; min-width: 0; }
+
+.post-topo {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 0.25rem 0.75rem;
+  font-size: 0.9rem;
+}
+.post-categoria { font-weight: 600; color: var(--cor); }
+.post-autor { color: var(--tinta); }
+.post-tempo { color: var(--tinta-suave); }
+
+.selo {
+  font-size: 0.8rem;
+  font-weight: 600;
+  padding: 0.05rem 0.5rem;
+  border-radius: 999px;
+}
+.selo.sobe { background: #DDF2E7; color: var(--sobe); }
+.selo.desce { background: var(--fundo); color: var(--tinta-suave); }
+
+.post-texto { margin: 0.5rem 0 0.75rem; font-size: 1.1rem; }
+
+.post-acoes {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.5rem 1rem;
+  font-size: 0.9rem;
+}
+.botao-curtir {
+  border: 1.5px solid var(--linha);
+  background: none;
+  color: var(--tinta);
+  border-radius: 999px;
+  padding: 0.25rem 0.75rem;
+}
+.botao-curtir[aria-pressed="true"] {
+  border-color: #C2417A;
+  color: #C2417A;
+}
+.post-comentarios { color: var(--tinta-suave); }
+.botao-porque {
+  margin-left: auto;
+  border: none;
+  background: none;
+  color: var(--destaque);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  padding: 0.25rem 0;
+}
+
+/* ---------- "Por que estou vendo isso?" (a conta da nota) ---------- */
+.explicacao {
+  margin-top: 0.9rem;
+  padding: 0.9rem 1rem;
+  background: var(--fundo);
+  border-radius: 10px;
+  font-variant-numeric: tabular-nums;
+}
+.explicacao ul { list-style: none; margin: 0; padding: 0; }
+.explicacao li,
+.explicacao-total {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+}
+.explicacao li { padding: 0.2rem 0; }
+.explicacao li span:last-child { color: var(--sobe); font-weight: 600; }
+.explicacao-total {
+  margin: 0.5rem 0 0;
+  padding-top: 0.5rem;
+  border-top: 2px dashed var(--linha);
+  font-weight: 800;
+  font-size: 1.1rem;
+}
+
+/* Destaque rápido no post que subiu */
+.post-subiu { animation: piscar 0.9s ease-out; }
+@keyframes piscar {
+  from { box-shadow: 0 0 0 3px var(--sobe); }
+  to   { box-shadow: 0 0 0 3px transparent; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .post-subiu { animation: none; }
+}
+
+/* ---------- Celular ---------- */
+@media (max-width: 720px) {
+  .layout { grid-template-columns: 1fr; }
+  .painel { position: static; }
+  .botao-porque { margin-left: 0; }
+}
+
+/* ---------- Erro de conexão com o servidor ---------- */
+.erro {
+  margin: 0;
+  padding: 1rem 1.25rem;
+  background: var(--superficie);
+  border-left: 4px solid #C2417A;
+  border-radius: 10px;
+}

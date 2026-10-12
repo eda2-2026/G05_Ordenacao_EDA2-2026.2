@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Por que isso apareceu pra mim?</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,600;12..96,800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header class="cabecalho">
+    <h1>Por que isso apareceu pra mim?</h1>
+    <p>Um feed que mostra a conta por trás de cada post. Marque seus interesses, curta posts e veja a ordem mudar.</p>
+  </header>
+
+  <div class="layout">
+    <aside class="painel">
+      <section>
+        <h2>Seus interesses</h2>
+        <div id="interesses" class="chips"></div>
+      </section>
+
+      <section class="status-caixa">
+        <h2>Última ordenação</h2>
+        <div id="status" aria-live="polite"></div>
+      </section>
+    </aside>
+
+    <main id="feed" class="feed"></main>
+  </div>
+
+  <script src="js/app.js"></script>
+</body>
+</html>
