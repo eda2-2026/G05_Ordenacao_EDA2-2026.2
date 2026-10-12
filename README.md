@@ -24,7 +24,7 @@ A nota de cada post soma quatro critérios:
 
 O botão **"Por que estou vendo isso?"** mostra essa conta para cada post.
 
-<img width="920" height="622" alt="image" src="https://github.com/user-attachments/assets/e1d40f1a-6f3f-4e73-a2ec-1e235da898d8" />
+<img width="653" height="442" alt="image" src="https://github.com/user-attachments/assets/cb9adb7a-f43d-486b-82b6-590fed05fb7f" />
 
 
 ## Algoritmos de ordenação
