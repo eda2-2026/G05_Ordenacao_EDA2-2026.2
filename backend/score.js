@@ -15,7 +15,7 @@ function calcularNota(post, perfil) {
   // 1. Interesse marcado pelo usuário
   if (perfil.interesses.has(post.categoria)) {
     motivos.push({
-      texto: Você marcou interesse em ${nomeCategoria},
+      texto: `Você marcou interesse em ${nomeCategoria}`,
       pontos: PONTOS_POR_INTERESSE,
     });
   }
@@ -25,7 +25,7 @@ function calcularNota(post, perfil) {
   if (curtidasNaCategoria > 0) {
     const plural = curtidasNaCategoria === 1 ? "post" : "posts";
     motivos.push({
-      texto: Você curtiu ${curtidasNaCategoria} ${plural} de ${nomeCategoria},
+      texto: `Você curtiu ${curtidasNaCategoria} ${plural} de ${nomeCategoria}`,
       pontos: curtidasNaCategoria * PONTOS_POR_CURTIDA_NA_CATEGORIA,
     });
   }
@@ -35,7 +35,7 @@ function calcularNota(post, perfil) {
   const pontosPopularidade = Math.min(MAX_PONTOS_POPULARIDADE, Math.floor(engajamento / 100));
   if (pontosPopularidade > 0) {
     motivos.push({
-      texto: Popular: ${post.curtidas} curtidas e ${post.comentarios} comentários,
+      texto: `Popular: ${post.curtidas} curtidas e ${post.comentarios} comentários`,
       pontos: pontosPopularidade,
     });
   }
@@ -44,7 +44,7 @@ function calcularNota(post, perfil) {
   const pontosRecencia = Math.max(0, MAX_PONTOS_RECENCIA - post.horasAtras);
   if (pontosRecencia > 0) {
     motivos.push({
-      texto: Publicado há ${post.horasAtras}h,
+      texto: `Publicado há ${post.horasAtras}h`,
       pontos: pontosRecencia,
     });
   }

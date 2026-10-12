@@ -9,7 +9,7 @@ const explicacoesAbertas = new Set(); // posts com o "por que?" aberto
 async function chamarApi(metodo, caminho) {
   const resposta = await fetch(caminho, { method: metodo });
   if (!resposta.ok) {
-    throw new Error(Erro ${resposta.status} em ${caminho});
+    throw new Error(`Erro ${resposta.status} em ${caminho}`);
   }
   return resposta.json();
 }
@@ -18,12 +18,12 @@ async function chamarApi(metodo, caminho) {
 // Ações do usuário
 // ---------------------------------------------------------------------------
 async function alternarInteresse(categoria) {
-  estado = await chamarApi("POST", /api/interesses/${categoria});
+  estado = await chamarApi("POST", `/api/interesses/${categoria}`);
   renderizarTudo(true);
 }
 
 async function alternarCurtida(id) {
-  estado = await chamarApi("POST", /api/curtidas/${id});
+  estado = await chamarApi("POST", `/api/curtidas/${id}`);
   renderizarTudo(true);
 }
 
@@ -79,8 +79,8 @@ function renderizarFeed(mostrarMovimentos) {
     const movimento = mostrarMovimentos ? item.movimento : 0;
 
     let selo = "";
-    if (movimento > 0) selo = <span class="selo sobe">subiu ${movimento}</span>;
-    if (movimento < 0) selo = <span class="selo desce">desceu ${-movimento}</span>;
+    if (movimento > 0) selo = `<span class="selo sobe">subiu ${movimento}</span>`;
+    if (movimento < 0) selo = `<span class="selo desce">desceu ${-movimento}</span>`;
 
     html += `
       <article class="post ${movimento > 0 ? "post-subiu" : ""}" style="--cor: ${cat.cor}">
@@ -95,7 +95,7 @@ function renderizarFeed(mostrarMovimentos) {
           <p class="post-texto">${post.texto}</p>
           <footer class="post-acoes">
             <button class="botao-curtir" data-curtir="${post.id}" aria-pressed="${curtido}">
-              ${curtido ? "♥️ Curtido" : "♡ Curtir"} <span>${post.curtidas}</span>
+              ${curtido ? "♥ Curtido" : "♡ Curtir"} <span>${post.curtidas}</span>
             </button>
             <span class="post-comentarios">💬 ${post.comentarios}</span>
             <button class="botao-porque" data-porque="${post.id}" aria-expanded="${aberto}">
@@ -113,10 +113,10 @@ function renderizarFeed(mostrarMovimentos) {
 function renderizarExplicacao(item) {
   let linhas = "";
   for (const motivo of item.motivos) {
-    linhas += <li><span>${motivo.texto}</span><span>+${motivo.pontos}</span></li>;
+    linhas += `<li><span>${motivo.texto}</span><span>+${motivo.pontos}</span></li>`;
   }
   if (item.motivos.length === 0) {
-    linhas = <li><span>Nenhum ponto ainda. Marque interesses ou curta posts.</span></li>;
+    linhas = `<li><span>Nenhum ponto ainda. Marque interesses ou curta posts.</span></li>`;
   }
   return `
     <div class="explicacao">
