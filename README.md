@@ -121,8 +121,8 @@ tests/
 
 | Nome | Matrícula |
 | --- | --- |
-| Duda | |
-| | |
+| Maria Eduarda Quaresma Andrade | 222037577 |
+|  Beatriz Geane Santos Santos Lins | 222021844 |
 
 ## Vídeo de apresentação
 
