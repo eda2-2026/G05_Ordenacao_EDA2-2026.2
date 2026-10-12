@@ -117,17 +117,32 @@ tests/
 | POST | `/api/interesses/:categoria` | Marca ou desmarca um interesse (Merge Sort) |
 | POST | `/api/curtidas/:id` | Curte ou descurte um post (Insertion Sort) |
 
-## Integrantes
-
-| Nome | Matrícula |
-| --- | --- |
-| Maria Eduarda Quaresma Andrade | 222037577 |
-|  Beatriz Geane Santos Santos Lins | 222021844 |
 
 ## Vídeo de apresentação
 
-Link: (adicionar)
+- Link: (adicionar)
+- Slides: [Abrir os slides (PDF)](docs/apresentacao.pdf)
 
-## Slides da apresentação
 
-[Abrir os slides (PDF)](docs/apresentacao.pdf)
+<div align="center">
+
+## Membros da Equipe
+
+<table>
+  <tr>
+    <td align="center">
+      <a href="https://github.com/Beatriz-ge">
+        <img src="https://avatars.githubusercontent.com/u/129804255?v=4" width="120" alt="Beatriz Lins"><br>
+        <sub><b>Beatriz Lins - 222021844 </b></sub>
+      </a>
+    </td>
+    <td align="center">
+      <a href="https://github.com/dudaa28">
+        <img src="https://avatars.githubusercontent.com/u/164348330?v=4" width="120" alt="Maria Eduarda"><br>
+        <sub><b>Maria Eduarda - 222037577 </b></sub>
+      </a>
+    </td>
+  </tr>
+</table>
+
+</div>
