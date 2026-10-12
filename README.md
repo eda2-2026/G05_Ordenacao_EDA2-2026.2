@@ -127,3 +127,7 @@ tests/
 ## Vídeo de apresentação
 
 Link: (adicionar)
+
+## Slides da apresentação
+
+[Abrir os slides (PDF)](docs/apresentacao.pdf)
