@@ -8,6 +8,9 @@ Muita gente não sabe como as redes sociais escolhem o que aparece no feed. Por 
 
 Este projeto simula um feed e mostra, de forma didática, a conta por trás de cada post e o algoritmo de ordenação usado em cada momento. A proposta é conscientizar quem usa redes sociais e defender feeds mais transparentes, guiados pelos interesses das pessoas e não pelo tempo de tela.
 
+<img width="1360" height="768" alt="image" src="https://github.com/user-attachments/assets/b02249a0-86e3-4df8-b6a5-1e1cbb0080a2" />
+
+
 ## Como funciona
 
 A nota de cada post soma quatro critérios:
@@ -20,6 +23,9 @@ A nota de cada post soma quatro critérios:
 | Recência (perde 1 ponto por hora) | até +24 |
 
 O botão **"Por que estou vendo isso?"** mostra essa conta para cada post.
+
+<img width="920" height="622" alt="image" src="https://github.com/user-attachments/assets/e1d40f1a-6f3f-4e73-a2ec-1e235da898d8" />
+
 
 ## Algoritmos de ordenação
 
